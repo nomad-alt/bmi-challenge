@@ -9,7 +9,7 @@ describe('BMI_UI - index.html', function() {
         $('height_feets').val('5');
         $('height_inches').val('10');
         $('#calculate').trigger('click');
-        $('calculator_imp').trigger('click');
+        $('#calculate_i').trigger('click');
     });
 
     it("displays metric BMI Value", function() {
@@ -25,6 +25,6 @@ describe('BMI_UI - index.html', function() {
     });
 
     it("displays BMI Message", function() {
-      expect($(display_message_i).text()).toBe('and you are Normal');
+      expect($('#display_message_i').text()).toBe('and you are Normal');
     });
 });
