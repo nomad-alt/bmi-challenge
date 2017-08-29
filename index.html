@@ -2,22 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>BMI Magic Calculator</title>
     <script src="src/person.js"></script>
     <script src="src/bmi_calculator.js"></script>
     <script src='https://code.jquery.com/jquery-2.1.4.js'></script>
-    <script type="text/javascript">
-  $(document).ready(function () {
-    $('#calculate').click(function () {
-      var w = parseFloat($('#weight').val());
-      var h = parseFloat($('#height').val());
-      var person = new Person({weight: w, height: h});
-      person.calculate_bmi();
-      $('#display_value').html('Your BMI is ' + person.bmiValue);
-      $('#display_message').html('and you are '+ person.bmiMessage);
-    });
-  });
-</script>
     <script> x = 3 </script>
     <script src="http://example.com/script.js"></script>
     <noscript>
@@ -36,4 +24,26 @@
 
     </div>
   </body>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#calculate').click(function () {
+          var w = parseFloat($('#weight').val());
+          var h = parseFloat($('#height').val());
+          var person = new Person({weight: w, height: h});
+          person.calculate_bmi();
+          $('#display_value').html('Your BMI is ' + person.bmiValue);
+          $('#display_message').html('and you are '+ person.bmiMessage);
+        });
+
+        $('#calculate').click(function () {
+          var wl = parseFloat($('#weight_lbm').val());
+          var hf = parseFloat($('#height_feets').val());
+          var hi = parseFloat($('#height_inches').val());
+          var person_imperial = new Person({weight_lbm: wl, height_feets: hf, height_inches: hi});
+          person_imperial.calculate_imperial_bmi();
+          $('#display_value_i').html('Your BMI is ' + person_imperial.bmiValue);
+          $('#display_value_i').html('and you are ' + person_imperial.bmiMessage);
+        });
+      });
+  </script>
 </html>
