@@ -1,0 +1,14 @@
+.wrap {
+  width: 50%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+ input {
+   background-color: #3CB18A;
+   padding: 16px 42px;
+}
+
+.top-bar {
+  background-color: #FFFFFF;
+}
