@@ -6,8 +6,8 @@ describe('BMI_UI - index.html', function() {
         $('#weight').val('90');
         $('#height').val('186');
         $('#weight_lbm').val('160');
-        $('height_feets').val('5');
-        $('height_inches').val('10');
+        $('#height_feets').val('5');
+        $('#height_inches').val('10');
         $('#calculate').trigger('click');
         $('#calculate_i').trigger('click');
     });
